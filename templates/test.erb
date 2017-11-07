@@ -1,0 +1,18 @@
+#cat test.erb
+#Name <%= @name %>
+#Owner <%= @myowner %>
+#Group <%= @mygroup %>
+#Mode <%= @mode %>
+#Path <%= @path %>
+#Content <%= @content %>
+#Vars <%= @vars %>
+#Entries <%= @entries %>
+ 
+ 
+<% if @vars.kind_of?(Hash) -%>
+# yep
+  <% Hash(@vars).each do |key,val| -%>
+# Variable
+<%= key %>=<%= val %>
+  <% end -%>
+<% end -%>

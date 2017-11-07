@@ -37,6 +37,7 @@ class cron (
   $service_enable        = true,
   $service_ensure        = 'running',
   $service_name          = 'USE_DEFAULTS',
+  $user_crontab_path     = '/var/spool/cron/',
   # deprecated
   $enable_cron           = undef,
   $ensure_state          = undef,
